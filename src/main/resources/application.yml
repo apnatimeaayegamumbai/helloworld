@@ -1,0 +1,24 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/sample_db?serverTimezone=UTC
+    username: sampleuser
+    password: SamplePassword
+
+  flyway:
+    user: sampleuser
+    password: SamplePassword
+    url: jdbc:mysql://localhost:3306?serverTimezone=UTC
+    schemas: sample_db
+    baseline-on-migrate: true
+    baseline-version: 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
