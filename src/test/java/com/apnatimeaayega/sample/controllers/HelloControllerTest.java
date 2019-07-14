@@ -1,4 +1,4 @@
-package com.apnatimeaayega.sample;
+package com.apnatimeaayega.sample.controllers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ public class HelloControllerTest {
 
     @Test
     public void testSayHello() throws Exception {
-        mockMvc.perform(get("/hello/").accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/hello").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Hello!")));
     }
